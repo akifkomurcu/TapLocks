@@ -33,7 +33,9 @@
 		E159B9E02E3697C3000F04F4 /* Exceptions for "TapLocks" folder in "TapLocks" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Assets.xcassets,
 				Info.plist,
+				lock.json,
 			);
 			target = E159B9752E368BB9000F04F4 /* TapLocks */;
 		};
