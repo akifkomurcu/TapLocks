@@ -29,9 +29,22 @@
 		E159B98E2E368BBA000F04F4 /* TapLocksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TapLocksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		E159B9E02E3697C3000F04F4 /* Exceptions for "TapLocks" folder in "TapLocks" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = E159B9752E368BB9000F04F4 /* TapLocks */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		E159B9782E368BB9000F04F4 /* TapLocks */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E159B9E02E3697C3000F04F4 /* Exceptions for "TapLocks" folder in "TapLocks" target */,
+			);
 			path = TapLocks;
 			sourceTree = "<group>";
 		};
