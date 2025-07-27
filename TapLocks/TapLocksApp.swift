@@ -8,10 +8,12 @@
 import SwiftUI
 
 @main
-struct TapLocksApp: App {
+struct MacLockAppApp: App {
+    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
     var body: some Scene {
-        WindowGroup {
-            ContentView()
+        Settings {
+            EmptyView() // Ayarlar penceresi yerine hiçbir pencere açılmasın
         }
     }
 }
