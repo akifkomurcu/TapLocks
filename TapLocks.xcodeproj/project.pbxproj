@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		E159B9852E368BBA000F04F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E159B96E2E368BB9000F04F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E159B9752E368BB9000F04F4;
+			remoteInfo = TapLocks;
+		};
+		E159B98F2E368BBA000F04F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E159B96E2E368BB9000F04F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E159B9752E368BB9000F04F4;
+			remoteInfo = TapLocks;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E159B9762E368BB9000F04F4 /* TapLocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapLocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E159B9842E368BBA000F04F4 /* TapLocksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TapLocksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E159B98E2E368BBA000F04F4 /* TapLocksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TapLocksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		E159B9782E368BB9000F04F4 /* TapLocks */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = TapLocks;
+			sourceTree = "<group>";
+		};
+		E159B9872E368BBA000F04F4 /* TapLocksTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = TapLocksTests;
+			sourceTree = "<group>";
+		};
+		E159B9912E368BBA000F04F4 /* TapLocksUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = TapLocksUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E159B9732E368BB9000F04F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E159B9812E368BBA000F04F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E159B98B2E368BBA000F04F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E159B96D2E368BB9000F04F4 = {
+			isa = PBXGroup;
+			children = (
+				E159B9782E368BB9000F04F4 /* TapLocks */,
+				E159B9872E368BBA000F04F4 /* TapLocksTests */,
+				E159B9912E368BBA000F04F4 /* TapLocksUITests */,
+				E159B9772E368BB9000F04F4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E159B9772E368BB9000F04F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E159B9762E368BB9000F04F4 /* TapLocks.app */,
+				E159B9842E368BBA000F04F4 /* TapLocksTests.xctest */,
+				E159B98E2E368BBA000F04F4 /* TapLocksUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E159B9752E368BB9000F04F4 /* TapLocks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E159B9982E368BBA000F04F4 /* Build configuration list for PBXNativeTarget "TapLocks" */;
+			buildPhases = (
+				E159B9722E368BB9000F04F4 /* Sources */,
+				E159B9732E368BB9000F04F4 /* Frameworks */,
+				E159B9742E368BB9000F04F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				E159B9782E368BB9000F04F4 /* TapLocks */,
+			);
+			name = TapLocks;
+			packageProductDependencies = (
+			);
+			productName = TapLocks;
+			productReference = E159B9762E368BB9000F04F4 /* TapLocks.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E159B9832E368BBA000F04F4 /* TapLocksTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E159B99B2E368BBA000F04F4 /* Build configuration list for PBXNativeTarget "TapLocksTests" */;
+			buildPhases = (
+				E159B9802E368BBA000F04F4 /* Sources */,
+				E159B9812E368BBA000F04F4 /* Frameworks */,
+				E159B9822E368BBA000F04F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E159B9862E368BBA000F04F4 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				E159B9872E368BBA000F04F4 /* TapLocksTests */,
+			);
+			name = TapLocksTests;
+			packageProductDependencies = (
+			);
+			productName = TapLocksTests;
+			productReference = E159B9842E368BBA000F04F4 /* TapLocksTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E159B98D2E368BBA000F04F4 /* TapLocksUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E159B99E2E368BBA000F04F4 /* Build configuration list for PBXNativeTarget "TapLocksUITests" */;
+			buildPhases = (
+				E159B98A2E368BBA000F04F4 /* Sources */,
+				E159B98B2E368BBA000F04F4 /* Frameworks */,
+				E159B98C2E368BBA000F04F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E159B9902E368BBA000F04F4 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				E159B9912E368BBA000F04F4 /* TapLocksUITests */,
+			);
+			name = TapLocksUITests;
+			packageProductDependencies = (
+			);
+			productName = TapLocksUITests;
+			productReference = E159B98E2E368BBA000F04F4 /* TapLocksUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E159B96E2E368BB9000F04F4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					E159B9752E368BB9000F04F4 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					E159B9832E368BBA000F04F4 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = E159B9752E368BB9000F04F4;
+					};
+					E159B98D2E368BBA000F04F4 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = E159B9752E368BB9000F04F4;
+					};
+				};
+			};
+			buildConfigurationList = E159B9712E368BB9000F04F4 /* Build configuration list for PBXProject "TapLocks" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E159B96D2E368BB9000F04F4;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = E159B9772E368BB9000F04F4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E159B9752E368BB9000F04F4 /* TapLocks */,
+				E159B9832E368BBA000F04F4 /* TapLocksTests */,
+				E159B98D2E368BBA000F04F4 /* TapLocksUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E159B9742E368BB9000F04F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E159B9822E368BBA000F04F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E159B98C2E368BBA000F04F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E159B9722E368BB9000F04F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E159B9802E368BBA000F04F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E159B98A2E368BBA000F04F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E159B9862E368BBA000F04F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E159B9752E368BB9000F04F4 /* TapLocks */;
+			targetProxy = E159B9852E368BBA000F04F4 /* PBXContainerItemProxy */;
+		};
+		E159B9902E368BBA000F04F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E159B9752E368BB9000F04F4 /* TapLocks */;
+			targetProxy = E159B98F2E368BBA000F04F4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E159B9962E368BBA000F04F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = PGMZ526F5V;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E159B9972E368BBA000F04F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = PGMZ526F5V;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		E159B9992E368BBA000F04F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TapLocks/TapLocks.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PGMZ526F5V;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akif.taplocks.TapLocks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E159B99A2E368BBA000F04F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TapLocks/TapLocks.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PGMZ526F5V;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akif.taplocks.TapLocks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		E159B99C2E368BBA000F04F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PGMZ526F5V;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akif.taplocks.TapLocksTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TapLocks.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TapLocks";
+			};
+			name = Debug;
+		};
+		E159B99D2E368BBA000F04F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PGMZ526F5V;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akif.taplocks.TapLocksTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TapLocks.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TapLocks";
+			};
+			name = Release;
+		};
+		E159B99F2E368BBA000F04F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PGMZ526F5V;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akif.taplocks.TapLocksUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = TapLocks;
+			};
+			name = Debug;
+		};
+		E159B9A02E368BBA000F04F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PGMZ526F5V;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akif.taplocks.TapLocksUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = TapLocks;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E159B9712E368BB9000F04F4 /* Build configuration list for PBXProject "TapLocks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E159B9962E368BBA000F04F4 /* Debug */,
+				E159B9972E368BBA000F04F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E159B9982E368BBA000F04F4 /* Build configuration list for PBXNativeTarget "TapLocks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E159B9992E368BBA000F04F4 /* Debug */,
+				E159B99A2E368BBA000F04F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E159B99B2E368BBA000F04F4 /* Build configuration list for PBXNativeTarget "TapLocksTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E159B99C2E368BBA000F04F4 /* Debug */,
+				E159B99D2E368BBA000F04F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E159B99E2E368BBA000F04F4 /* Build configuration list for PBXNativeTarget "TapLocksUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E159B99F2E368BBA000F04F4 /* Debug */,
+				E159B9A02E368BBA000F04F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E159B96E2E368BB9000F04F4 /* Project object */;
+}
