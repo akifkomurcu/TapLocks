@@ -10,6 +10,8 @@ import SwiftUI
 import LocalAuthentication
 
 class AppDelegate: NSObject, NSApplicationDelegate, KeyboardBlockerDelegate, NSPopoverDelegate {
+
+
     var statusItem: NSStatusItem?
     var popover: NSPopover!
     var keyboardBlocker = KeyboardBlocker()

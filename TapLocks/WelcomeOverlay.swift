@@ -1,55 +1,65 @@
-//
-//  WelcomeOverlay.swift
-//  TapLocks
-//
-//  Created by KOMURCU on 12.07.2025.
-//
-
 import SwiftUI
+
+struct WelcomeStep {
+    let icon: String
+    let title: String
+    let description: String
+}
+
+let welcomeSteps = [
+    WelcomeStep(icon: "lock.fill", title: "Keyboard Lock", description: "TapLocks temporarily locks your keyboard input with one click."),
+    WelcomeStep(icon: "menubar.rectangle", title: "Menu Bar", description: "Click the TapLocks icon in your menu bar to quickly lock or unlock."),
+    WelcomeStep(icon: "cursorarrow.click", title: "Unlock Easily", description: "While locked, just click anywhere to unlock your screen."),
+    WelcomeStep(icon: "touchid", title: "Extra Security", description: "You can use Touch ID or your password to unlock if enabled.")
+]
 
 struct WelcomeOverlay: View {
     var onDismiss: () -> Void
+    @State private var step = 0
 
+    
     var body: some View {
-        VStack(spacing: 28) {
-            Image(systemName: "hand.wave.fill")
+        VStack(spacing: 24) {
+            Image(systemName: welcomeSteps[step].icon)
                 .resizable()
                 .scaledToFit()
-                .frame(width: 72, height: 72)
+                .frame(width: 60, height: 60)
                 .foregroundColor(.accentColor)
-                .padding(.top, 36)
-
-            Text("Welcome!")
-                .font(.largeTitle.bold())
+                .padding(.top, 32)
+            
+            Text(welcomeSteps[step].title)
+                .font(.title.bold())
                 .multilineTextAlignment(.center)
-
-            Text("""
-            TapLocks allows you to temporarily lock your screen whenever you choose. While locked, keyboard input is disabled. You can easily unlock your screen at any time by simply clicking anywhere.
-            """)
+            
+            Text(welcomeSteps[step].description)
                 .font(.body)
-                .multilineTextAlignment(.leading)
-                .lineLimit(nil) // ← Bunu EKLE, ya da varsa kaldır!
-                .fixedSize(horizontal: false, vertical: true) // ← Satır sarımı düzgün çalışsın
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.horizontal, 32)
-
-
+                .multilineTextAlignment(.center)
+                .padding(.horizontal, 28)
+            
             Spacer()
-
-            Button(action: { onDismiss() }) {
-                Text("Continue")
-                    .font(.headline)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 14)
-                    .background(
-                        RoundedRectangle(cornerRadius: 16, style: .continuous)
-                            .fill(Color.accentColor)
-                    )
-                    .foregroundColor(.white)
+            
+            HStack {
+                if step > 0 {
+                    Button("Back") {
+                        withAnimation { step -= 1 }
+                    }
+                }
+                Spacer()
+                if step < welcomeSteps.count - 1 {
+                    Button("Next") {
+                        withAnimation { step += 1 }
+                    }
+                    .keyboardShortcut(.defaultAction)
+                } else {
+                    Button("Finish") {
+                        onDismiss()
+                    }
+                    .keyboardShortcut(.defaultAction)
+                }
             }
-            .buttonStyle(PlainButtonStyle())
-            .padding(.horizontal, 24)
-            .padding(.bottom, 36)
+            .font(.headline)
+            .padding(.horizontal, 28)
+            .padding(.bottom, 28)
         }
         .frame(width: 400, height: 400)
         .background(.thinMaterial)
