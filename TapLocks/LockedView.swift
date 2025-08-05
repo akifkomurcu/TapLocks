@@ -1,21 +1,22 @@
 import SwiftUI
 
 struct LockedView: View {
+    @Environment(\.colorScheme) var colorScheme
     @State private var animate = false
 
     var body: some View {
         ZStack {
-            VisualEffectBlur(material: .hudWindow, blendingMode: .withinWindow)
+            Color(NSColor.windowBackgroundColor)
                 .edgesIgnoringSafeArea(.all)
             Rectangle()
-                .fill(Color.black.opacity(0.2))
+                .fill(Color.black.opacity(colorScheme == .dark ? 0.2 : 0.05))
                 .edgesIgnoringSafeArea(.all)
 
             // Kilit kutusu
             VStack(spacing: 30) {
                 ZStack {
                     Circle()
-                        .fill(.regularMaterial)
+                        .fill(Color(NSColor.controlBackgroundColor).opacity(0.8))
                         .frame(width: 120, height: 120)
                         .shadow(color: .black.opacity(0.2), radius: 10)
 
@@ -23,7 +24,10 @@ struct LockedView: View {
                         .font(.system(size: 50))
                         .foregroundStyle(
                             LinearGradient(
-                                colors: [.white, .gray.opacity(0.8)],
+                                colors: [
+                                    colorScheme == .dark ? .white : .black,
+                                    colorScheme == .dark ? .gray.opacity(0.8) : .gray.opacity(0.4)
+                                ],
                                 startPoint: .topLeading,
                                 endPoint: .bottomTrailing
                             )
@@ -37,7 +41,10 @@ struct LockedView: View {
                     .font(.system(size: 48, weight: .black, design: .rounded))
                     .foregroundStyle(
                         LinearGradient(
-                            colors: [.white, .gray.opacity(0.7)],
+                            colors: [
+                                colorScheme == .dark ? .white : .black,
+                                colorScheme == .dark ? .gray.opacity(0.7) : .gray.opacity(0.3)
+                            ],
                             startPoint: .topLeading,
                             endPoint: .bottomTrailing
                         )
@@ -51,18 +58,18 @@ struct LockedView: View {
                 VStack(spacing: 12) {
                     Text("Tap to unlock")
                         .font(.system(size: 16, weight: .medium))
-                        .foregroundColor(.white.opacity(0.9))
+                        .foregroundColor(colorScheme == .dark ? .white.opacity(0.9) : .black.opacity(0.8))
 
                     HStack(spacing: 8) {
                         ForEach(0..<3, id: \.self) { index in
                             Circle()
-                                .fill(.white.opacity(0.7))
+                                .fill(colorScheme == .dark ? .white.opacity(0.7) : .black.opacity(0.5))
                                 .frame(width: 8, height: 8)
                                 .scaleEffect(animate ? 1.3 : 0.8)
                                 .animation(
                                     .easeInOut(duration: 1)
-                                    .repeatForever(autoreverses: true)
-                                    .delay(Double(index) * 0.3),
+                                        .repeatForever(autoreverses: true)
+                                        .delay(Double(index) * 0.3),
                                     value: animate
                                 )
                         }
@@ -71,16 +78,22 @@ struct LockedView: View {
                 .padding(.top, 20)
             }
             .padding(40)
-            .background(.regularMaterial)
+            .background(Color(NSColor.controlBackgroundColor).opacity(0.8))
             .cornerRadius(25)
             .shadow(color: .black.opacity(0.25), radius: 20, x: 0, y: 10)
             .overlay(
                 RoundedRectangle(cornerRadius: 25)
-                    .strokeBorder(LinearGradient(
-                        colors: [Color.white.opacity(0.15), Color.white.opacity(0.05)],
-                        startPoint: .topLeading,
-                        endPoint: .bottomTrailing
-                    ), lineWidth: 1)
+                    .strokeBorder(
+                        LinearGradient(
+                            colors: [
+                                Color.white.opacity(0.15),
+                                Color.white.opacity(0.05)
+                            ],
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        ),
+                        lineWidth: 1
+                    )
             )
         }
         .onAppear {

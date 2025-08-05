@@ -17,7 +17,6 @@ struct WelcomeOverlay: View {
     var onDismiss: () -> Void
     @State private var step = 0
 
-    
     var body: some View {
         VStack(spacing: 24) {
             Image(systemName: welcomeSteps[step].icon)
@@ -41,13 +40,17 @@ struct WelcomeOverlay: View {
             HStack {
                 if step > 0 {
                     Button("Back") {
-                        withAnimation { step -= 1 }
+                        withAnimation {
+                            step = max(0, step - 1)
+                        }
                     }
                 }
                 Spacer()
                 if step < welcomeSteps.count - 1 {
                     Button("Next") {
-                        withAnimation { step += 1 }
+                        withAnimation {
+                            step = min(welcomeSteps.count - 1, step + 1)
+                        }
                     }
                     .keyboardShortcut(.defaultAction)
                 } else {

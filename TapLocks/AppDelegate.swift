@@ -48,6 +48,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, KeyboardBlockerDelegate, NSP
 
         }
     }
+    
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        return false
+    }
 
     func hideLockedWindows() {
         DispatchQueue.main.async {
@@ -91,7 +95,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, KeyboardBlockerDelegate, NSP
             }
         }
 
-        UserDefaults.standard.removeObject(forKey: "welcomeWindow")
+         UserDefaults.standard.removeObject(forKey: "welcomeWindow")
         if !UserDefaults.standard.bool(forKey: "welcomeWindow") {
             showWelcomePopup()
         }
@@ -172,7 +176,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, KeyboardBlockerDelegate, NSP
         let popupView = NSHostingView(rootView:
             WelcomeOverlay { [weak self] in
                 UserDefaults.standard.set(true, forKey: "welcomeWindow")
-                self?.welcomeWindow?.close()
+                self?.welcomeWindow?.orderOut(nil)
                 self?.welcomeWindow = nil
             }
         )
