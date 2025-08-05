@@ -7,6 +7,7 @@
 
 import Foundation
 import AppKit
+import Cocoa
 
 protocol KeyboardBlockerDelegate: AnyObject {
     func keyboardBlockerDidChangeState(isBlocking: Bool)
@@ -43,9 +44,7 @@ class KeyboardBlocker: ObservableObject {
     func stopBlocking() {
         guard let thread = eventTapThread else { return }
 
-        thread.stopSafely() // döngü durur
-
-        // Thread'in gerçekten durmasını bekle
+        thread.stopSafely()
         while thread.isExecuting {
             Thread.sleep(forTimeInterval: 0.05)
         }
@@ -57,14 +56,20 @@ class KeyboardBlocker: ObservableObject {
 }
 
 func isEventTapAllowed() -> Bool {
-    let eventMask = (1 << CGEventType.keyDown.rawValue)
-    let eventTap = CGEvent.tapCreate(
-        tap: .cgSessionEventTap,
+    let eventMask = CGEventMask(1 << CGEventType.keyDown.rawValue)
+    guard let eventTap = CGEvent.tapCreate(
+        tap: .cghidEventTap,
         place: .headInsertEventTap,
         options: .listenOnly,
-        eventsOfInterest: CGEventMask(eventMask),
-        callback: { _, _, _, _ in return nil },
+        eventsOfInterest: eventMask,
+        callback: { _, _, event, _ in
+            return Unmanaged.passUnretained(event)
+        },
         userInfo: nil
-    )
-    return eventTap != nil
+    ) else {
+        return false
+    }
+    CFMachPortInvalidate(eventTap)
+
+    return true
 }

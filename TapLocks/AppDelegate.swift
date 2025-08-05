@@ -86,7 +86,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, KeyboardBlockerDelegate, NSP
             if self.keyboardBlocker.isBlocking && !self.isAuthenticating {
                 // yeniden aktif et
                 if !self.keyboardBlocker.isEventTapActive() {
-                    print("🔁 Event tap yeniden başlatılıyor (focus kaybı sonrası)")
+                    //print("Event tap yeniden başlatılıyor (focus kaybı sonrası)")
                     self.keyboardBlocker.startBlocking()
                 }
 
@@ -94,6 +94,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, KeyboardBlockerDelegate, NSP
                 self.lockedWindows.forEach { $0.makeKeyAndOrderFront(nil) }
             }
         }
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(screensDidChange),
+            name: NSApplication.didChangeScreenParametersNotification,
+            object: nil
+        )
 
          UserDefaults.standard.removeObject(forKey: "welcomeWindow")
         if !UserDefaults.standard.bool(forKey: "welcomeWindow") {
@@ -116,10 +123,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, KeyboardBlockerDelegate, NSP
         settingsMenuItem.target = self
         appMenu.addItem(settingsMenuItem)
         
-        if !isEventTapAllowed() {
+        let monitoring = isEventTapAllowed()
+        
+        if !monitoring {
               showInputMonitoringAlert()
           }
-        if !AXIsProcessTrusted() {
+        let trusted = AXIsProcessTrusted()
+
+        if !trusted {
             showAccessibilityAlert()
         }
 
@@ -138,6 +149,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, KeyboardBlockerDelegate, NSP
             if let url = URL(string: "x-apple.systempreferences:com.apple.preference.security?Privacy_Accessibility") {
                 NSWorkspace.shared.open(url)
             }
+        }
+    }
+    
+    @objc func screensDidChange() {
+        if keyboardBlocker.isBlocking {
+            showLockedWindows()
         }
     }
     

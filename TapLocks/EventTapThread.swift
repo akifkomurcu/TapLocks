@@ -28,19 +28,19 @@ class EventTapThread: Thread {
         )
 
         guard let eventTap = eventTap else {
-            print("⚠️ Event tap oluşturulamadı.")
+            //print("Event tap oluşturulamadı.")
             return
         }
 
         runLoopSource = CFMachPortCreateRunLoopSource(kCFAllocatorDefault, eventTap, 0)
         CFRunLoopAddSource(CFRunLoopGetCurrent(), runLoopSource, .commonModes)
         CGEvent.tapEnable(tap: eventTap, enable: true)
-        print("🎯 EventTapThread başladı")
+        //print("EventTapThread başladı")
         // Run loop'u döngü ile çalıştırıyoruz
         while keepRunning && !isCancelled {
             CFRunLoopRunInMode(.defaultMode, 0.1, true)
         }
-        print("🧹 EventTapThread sonlandırıldı")
+        //print("EventTapThread sonlandırıldı")
         // Temizleme
         CGEvent.tapEnable(tap: eventTap, enable: false)
 
